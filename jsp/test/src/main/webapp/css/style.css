@@ -1,0 +1,1518 @@
+@charset "EUC-KR";
+body {
+    position: relative
+}
+
+.wrapper {
+    position: relative;
+    min-width: 1136px;
+    z-index: 10
+}
+
+.wrapper header {
+    position: relative;
+    min-width: 1136px;
+    height: 104px;
+    padding: 0 72px;
+    transition: .3s;
+    background: #fff;
+    box-shadow: 0 8px 8px rgba(0,0,0,.05);
+    text-align: center;
+    z-index: 101
+}
+
+
+
+/*logo*/
+.wrapper header .topLogo {
+    position: absolute;
+    top: 28px;
+    left: 62px;
+    width: 160px;
+    height: 60px;
+    z-index: 10
+}
+
+.wrapper header .topLogo>a {
+    display: block;
+    position: relative;
+    width: 160px;
+    height: 60px
+}
+
+.wrapper header .topLogo>a:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 140px;
+    height: 26px;
+    margin-top: -13px;
+    margin-left: -70px;
+    background: url(/works/jsp/test/src/main/webapp/imges/jeju.png) no-repeat
+}
+
+.wrapper header .topLogo.jejuair {
+    top: 45px;
+    width: 240px;
+    height: 26px
+}
+
+.wrapper header .topLogo.jejuair>a {
+    width: 100%;
+    height: 100%
+}
+
+.wrapper header .topLogo.jejuair>a:after {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background: url(C:/works/jsp/test/src/main/webapp/imges) no-repeat 0 0
+}
+
+.wrapper header nav {
+    display: inline-block;
+    margin: 0 auto;
+    padding: 35px 0 0 0;
+    text-align: center;
+    font-size: 0
+}
+
+.wrapper header nav * {
+    vertical-align: top
+}
+
+.wrapper header nav .navList {
+    position: relative;
+    display: inline-block;
+    font-size: 0;
+    z-index: 10
+}
+
+.wrapper header nav .navList>h2 {
+    display: inline-block
+}
+
+.wrapper header nav .navList>h2>a {
+    display: block;
+    padding: 0 16px;
+    color: #202020;
+    font-size: 2.2rem;
+    line-height: 46px;
+    font-family: NanumSquareR,-apple-system,BlinkMacSystemFont,Open Sans,Helvetica Neue,sans-serif;
+    font-weight: 900
+}
+
+.wrapper header nav .navList>h2>a[aria-selected=true] {
+    color: #63a1ff
+}
+
+.wrapper header nav .navList>h2>a:hover {
+    color: #63a1ff
+}
+
+.wrapper header nav .quickSearchWrap {
+    display: inline-block;
+    margin: 11px 0 0 16px
+}
+
+.wrapper header nav .quickSearchWrap .btSearch {
+    position: relative;
+    width: 80px;
+    height: 40px;
+    margin-top: -9px;
+    z-index: 10
+}
+
+.wrapper header nav .quickSearchWrap .btSearch:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 1px;
+    height: 20px;
+    margin-top: -10px;
+    background: #cacaca
+}
+
+.wrapper header nav .quickSearchWrap .btSearch:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 24px;
+    height: 24px;
+    margin-top: -12px;
+    margin-left: -12px;
+    background: url(/resource/PC/images/common/spr_layout.png) no-repeat 0 -26px
+}
+
+.wrapper header nav .quickSearchWrap .btSearch:hover:after {
+    background-position: -83px -26px
+}
+
+.wrapper header nav .quickSearchWrap .laySearch {
+    display: none;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 11;
+    box-sizing: content-box
+}
+
+.wrapper header .topUtil {
+    display: inline-block;
+    position: absolute;
+    top: 10px;
+    right: 56px;
+    z-index: 10;
+    font-size: 0;
+    vertical-align: top;
+    text-align: right
+}
+
+.wrapper header .topUtil>a {
+    position: relative;
+    display: inline-block;
+    height: 35px;
+    padding: 0 16px;
+    color: gray;
+    font-size: 1.3rem;
+    line-height: 35px;
+    z-index: 100
+}
+
+.wrapper header .topUtil>a:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: -3px;
+    width: 18px;
+    height: 18px;
+    margin-top: -10px;
+    background: url(/resource/PC/images/common/spr_layout.png) no-repeat -84px -26px
+}
+
+.wrapper header .topUtil>a.login:before {
+    background-position: -109px -26px
+}
+
+.wrapper header .topUtil>a.mypage:before {
+    background-position: -129px -26px
+}
+
+.wrapper header .topUtil>a.order:before {
+    background-position: -149px -26px
+}
+
+.wrapper header .topUtil>a.logout:before {
+    background-position: -169px -26px
+}
+
+.wrapper header .topUtil>a:hover {
+    color: #202020;
+    font-weight: 600
+}
+
+.wrapper header .topUtil .navEtc>li {
+    display: inline-block
+}
+
+.wrapper header .topUtil .navEtc>li a {
+    display: block;
+    height: 29px;
+    padding: 0 15px;
+    color: #404040;
+    font-weight: 600;
+    line-height: 29px
+}
+
+.wrapper header .topUtil .navEtc>li a:hover {
+    color: #63a1ff
+}
+
+.wrapper .container {
+    overflow: clip;
+    min-height: 100vh;
+    padding-bottom: 164px;
+    text-align: center
+}
+
+.wrapper .container:after {
+    content: "";
+    display: block;
+    clear: both
+}
+
+.wrapper .container.bgGray {
+    background-color: #f8f8f8
+}
+
+.wrapper .container .contents {
+    width: 1136px;
+    margin: 0 auto;
+    padding-top: 64px;
+    text-align: left
+}
+
+.wrapper .container .contents.no-margin {
+    width: 100%;
+    position: relative;
+    margin-bottom: -164px !important
+}
+
+.wrapper.mainWrapper header {
+    box-shadow: none;
+    background: #f8f8f8
+}
+
+.wrapper.lnbWrapper .container {
+    width: 1136px;
+    margin: 0 auto;
+    text-align: left
+}
+
+.wrapper.lnbWrapper .snb {
+    float: left;
+    width: 288px;
+    margin-top: 64px
+}
+
+.wrapper.lnbWrapper .snb .titSnb {
+    height: 29px;
+    margin-bottom: 24px;
+    padding: 0 24px;
+    color: #202020;
+    font-size: 2.6rem;
+    font-family: NanumSquareR,-apple-system,BlinkMacSystemFont,Open Sans,Helvetica Neue,sans-serif;
+    font-weight: 900;
+    line-height: 29px
+}
+
+.wrapper.lnbWrapper .snb nav {
+    width: 232px;
+    margin-top: 12px
+}
+
+.wrapper.lnbWrapper .snb nav a {
+    display: block
+}
+
+.wrapper.lnbWrapper .snb .snbListDep1>li {
+    margin-top: 12px
+}
+
+.wrapper.lnbWrapper .snb .snbListDep1>li>.snbDep1 {
+    position: relative;
+    padding: 0 34px 0 24px;
+    color: #202020;
+    font-size: 1.8rem;
+    font-weight: 700;
+    border-radius: 12px;
+    line-height: 54px;
+    border: 1px solid #f8f8f8;
+    background: #f8f8f8
+}
+
+.wrapper.lnbWrapper .snb .snbListDep1>li>.snbDep1:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 7px;
+    height: 7px;
+    margin-top: -3.5px;
+    margin-left: -3.5px;
+    left: auto;
+    right: 27px;
+    margin: -4px 0 0 0;
+    border: solid #cacaca;
+    border-width: 2px 2px 0 0;
+    transform: rotate(45deg)
+}
+
+.wrapper.lnbWrapper .snb .snbListDep1>li>.snbDep1[aria-selected=true] {
+    color: #63a1ff;
+    border-color: #abccff;
+    background: #fff
+}
+
+.wrapper.lnbWrapper .snb .snbListDep1>li>.snbDep1[aria-selected=true]:after {
+    border-color: #63a1ff
+}
+
+.wrapper.lnbWrapper .snb .snbListDep1>li>.snbDep1[aria-selected=true][aria-expanded=true] {
+    border-radius: 12px 12px 0 0;
+    border-bottom: none
+}
+
+.wrapper.lnbWrapper .snb .snbListDep1>li>.snbDep1[aria-selected=true][aria-expanded=true]+.snbListDep2 {
+    display: block
+}
+
+.wrapper.lnbWrapper .snb .snbListDep2 {
+    display: none;
+    padding-bottom: 8px;
+    border: 1px solid #abccff;
+    border-top: none;
+    border-radius: 0 0 12px 12px;
+    background: #fff
+}
+
+.wrapper.lnbWrapper .snb .snbListDep2>li>.snbDep2 {
+    height: 56px;
+    position: relative;
+    padding: 0 34px 0 24px;
+    color: #404040;
+    font-weight: 700;
+    line-height: 54px
+}
+
+.wrapper.lnbWrapper .snb .snbListDep2>li>.snbDep2:hover,.wrapper.lnbWrapper .snb .snbListDep2>li>.snbDep2[aria-selected=true] {
+    color: #63a1ff;
+    background: #f4f9ff
+}
+
+.wrapper.lnbWrapper .contents {
+    float: left;
+    width: calc(100% - 288px)
+}
+
+.wrapper.memberWrapper .contents {
+    width: 560px
+}
+
+.wrapper.memberWrapper .contents .btnArea .btnDefault {
+    display: block;
+    width: 100%
+}
+
+.wrapper.airWrapper {
+    background: #f8f8f8
+}
+
+.wrapper.completeWrapper .container {
+    overflow: hidden
+}
+
+.wrapper.completeWrapper .container .completePanel {
+    width: 100%;
+    padding: 87px 0 80px;
+    text-align: center;
+    background: #63a1ff
+}
+
+.wrapper.completeWrapper .container .completePanel .message {
+    padding: 160px 0 0;
+    color: #fff;
+    font-size: 2.6rem;
+    font-weight: 900;
+    font-family: NanumSquareR,-apple-system,BlinkMacSystemFont,Open Sans,Helvetica Neue,sans-serif;
+    background: url(/resource/PC/images/common/bg_comp01.png) no-repeat 50% 0
+}
+
+.wrapper.completeWrapper .container .contents {
+    position: relative;
+    width: 560px;
+    padding-top: 0
+}
+
+.wrapper.completeWrapper .container .contents .boxCompCont {
+    position: relative
+}
+
+.wrapper.completeWrapper .container .contents .boxCompCont:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 100vw;
+    min-width: 1336px;
+    height: 50%;
+    background: #63a1ff;
+    z-index: 1;
+    transform: translateX(-50%)
+}
+
+.wrapper.completeWrapper .container .contents .boxCompCont:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -8px;
+    left: 8px;
+    right: 8px;
+    height: 26px;
+    border-radius: 12px;
+    background: #f4f9ff
+}
+
+.wrapper.completeWrapper .container .contents .boxCompCont .inner {
+    position: relative;
+    min-height: 142px;
+    padding: 32px 24px;
+    border-radius: 12px;
+    background: #fff;
+    z-index: 10
+}
+
+.wrapper.completeWrapper .container .contents .btnArea {
+    margin-top: 32px;
+    display: flex;
+    margin: 0 -4px
+}
+
+.wrapper.completeWrapper .container .contents .btnArea .btnDefault {
+    width: 100%;
+    min-width: auto;
+    margin: 0 4px
+}
+
+.wrapper.completeWrapper .container .contents .joinArea {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 24px;
+    margin: 64px 0 8px;
+    border-top: 1px solid #eaeaea;
+    position: relative
+}
+
+.wrapper.completeWrapper .container .contents .joinArea .txt strong {
+    display: inline-block;
+    color: #202020;
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 8px
+}
+
+.wrapper.completeWrapper .container .contents .joinArea .txt p {
+    font-size: 1.5rem
+}
+
+.wrapper.completeWrapper .container .contents .joinArea .tooltipWrap {
+    position: absolute;
+    top: 50px;
+    right: 0
+}
+
+.wrapper.completeWrapper .container .contents .joinArea .tooltipWrap .btnTool {
+    width: 12px;
+    height: 12px
+}
+
+.wrapper.completeWrapper .container .contents .joinArea .tooltipWrap .btnTool::after {
+    background: url(/resource/PC/images/common/ico_tooltip_gray.png) no-repeat;
+    background-size: 12px;
+    width: 12px;
+    height: 12px;
+    margin-top: -6px;
+    margin-left: -6px
+}
+
+.wrapper.completeWrapper .container .contents .joinArea .tooltipWrap .tooltipCont {
+    width: 220px;
+    top: 16px;
+    left: auto;
+    right: 0
+}
+
+.wrapper.completeWrapper .container .contents .joinArea .tooltipWrap .tooltipCont .context p {
+    font-size: 1.3rem;
+    color: #007d3c
+}
+
+.wrapper.quickWrapper header {
+    background: #f8f8f8
+}
+
+.wrapper.quickWrapper~.layerMap {
+    z-index: 1
+}
+
+.wrapper.headFixed header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 72px;
+    padding: 0 72px 0 56px;
+    background: #1d68dc;
+    text-align: left
+}
+
+.wrapper.headFixed header .topLogo {
+    display: none
+}
+
+.wrapper.headFixed header nav {
+    margin: 0;
+    padding-top: 14px;
+    text-align: left;
+    position: relative;
+    top: -4px
+}
+
+.wrapper.headFixed header nav .navList>h2 a {
+    color: #fff;
+    font-weight: 600
+}
+
+.wrapper.headFixed header nav .navList>h2 a {
+    color: #fff;
+    font-weight: 600
+}
+
+.wrapper.headFixed header nav .quickSearchWrap {
+    border-color: rgba(255,255,255,.2)
+}
+
+.wrapper.headFixed header nav .quickSearchWrap .laySearch {
+    top: 72px
+}
+
+.wrapper.headFixed header nav .quickSearchWrap .laySearch .quickSearchList {
+    padding-top: 95px
+}
+
+.wrapper.headFixed header nav .quickSearchWrap .btSearch:after {
+    background-position: -44px -26px
+}
+
+.wrapper.headFixed header .topUtil {
+    margin-top: 18px;
+    position: static;
+    float: right
+}
+
+.wrapper.headFixed header .topUtil>a {
+    padding-left: 22px;
+    color: rgba(255,255,255,.6);
+    font-size: 1.4rem;
+    font-weight: 400
+}
+
+.wrapper.headFixed header .topUtil>a.login:before {
+    background-position: -189px -26px
+}
+
+.wrapper.headFixed header .topUtil>a.mypage:before {
+    background-position: -208px -26px
+}
+
+.wrapper.headFixed header .topUtil>a.order:before {
+    background-position: -227px -26px
+}
+
+.wrapper.headFixed header .topUtil>a.logout:before {
+    background-position: -247px -26px
+}
+
+.wrapper.headFixed header .topUtil>a:hover {
+    color: #fff
+}
+
+.wrapper.headFixed header .topUtil .navEtc {
+    position: absolute;
+    top: 21px;
+    left: 692px
+}
+
+.wrapper.headFixed header .topUtil .navEtc>li a {
+    color: rgba(255,255,255,.6);
+    font-size: 1.8rem
+}
+
+.wrapper.headFixed header .topUtil .navEtc>li a:hover {
+    color: #fff
+}
+
+.wrapper.headFixed .container {
+    padding-top: 104px
+}
+
+.wrapper.headFixed .kf_schedule_search.rentcar .kf_schNum {
+    position: fixed;
+    top: 72px;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    border-radius: 0
+}
+
+.wrapper.headFixed .listTap {
+    position: fixed;
+    top: 128px;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    background: #f8f8f8;
+    margin: 0;
+    padding: 16px
+}
+
+.wrapper.main02 header nav .searchBtns>li>a {
+    font-size: 0
+}
+
+.wrapper.main02 header nav .searchBtns>li>a::after {
+    margin-top: -16px
+}
+
+.wrapper.main02 .searchBtns>li>a {
+    font-size: 1.3rem;
+    position: relative
+}
+
+.wrapper.main02 .searchBtns>li>a span {
+    width: 100%;
+    font-size: 1.3rem;
+    color: gray;
+    position: absolute;
+    left: 50%;
+    bottom: 12px;
+    transform: translateX(-50%)
+}
+
+.wrapper.main02 .searchBtns>li>a[aria-selected=true] span {
+    color: #fff
+}
+
+.wrapper.main02 .searchBtns>li>a::after {
+    margin-top: -28px
+}
+
+.wrapper.main02 .swiperRentcar .swiper-container .swiper-wrapper .swiper-slide figure {
+    height: 238px;
+    position: relative
+}
+
+.wrapper.main02 .swiperRentcar .swiper-container .swiper-wrapper .swiper-slide figure img {
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 318px
+}
+
+.wrapper.main02 .eatList>li a .conUtil span {
+    color: gray
+}
+
+.wrapper.main02 .eatList>li a .txt {
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    height: auto;
+    margin-bottom: 8px
+}
+
+.wrapper.main02 .airList {
+    display: flex;
+    flex-flow: row wrap;
+    margin: -3px -8px 0
+}
+
+.wrapper.main02 .airList li {
+    margin: 0 8px;
+    width: 368px;
+    height: 276px;
+    border-radius: 16px;
+    overflow: hidden
+}
+
+.wrapper.main02 .airList li a {
+    position: relative
+}
+
+.wrapper.main02 .airList li a .txtWrap {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 24px;
+    width: 100%;
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    z-index: 10
+}
+
+.wrapper.main02 .airList li a .txtWrap span {
+    color: #fff;
+    display: block;
+    width: 58px;
+    height: 24px;
+    font-size: 1.2rem;
+    line-height: 22px;
+    text-align: center;
+    border-radius: 6px;
+    border: 1px solid #fff;
+    margin-bottom: 4px
+}
+
+.wrapper.main02 .airList li a .txtWrap strong {
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.8rem
+}
+
+.wrapper.main02 .airList li a .txtWrap strong em {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background: url(/resource/PC/images/main/ic_x12_oneway.png) no-repeat;
+    background-size: 12px;
+    margin: 0 8px
+}
+
+.wrapper.main02 .airList li a::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 138px;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+    opacity: .6;
+    position: absolute;
+    bottom: 0;
+    left: 0
+}
+
+.wrapper.main02 .titDep2 .titIco {
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 4px;
+    background: url(//.png) no-repeat;
+    background-size: 192px 64px;
+    background-position: -96px 0
+}
+
+.wrapper.main02 .titDep2 .titIco.event {
+    background-position: -128px 0
+}
+
+.wrapper.main02 .titDep2 .titIco.air {
+    background-position: 0 0
+}
+
+.wrapper.main02 .titDep2 .titIco.stay {
+    background-position: -160px 0
+}
+
+.wrapper.main02 .titDep2 .titIco.cafe {
+    background-position: -32px 0
+}
+
+.wrapper.main02 .titDep2 .titIco.story {
+    background-position: -64px 0
+}
+
+.wrapper.main02 .titDep2 .titIco.trip {
+    background-position: 0 -34px
+}
+
+#wrapper.headFixed>header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 72px;
+    padding: 0 72px 0 56px;
+    background: #1d68dc;
+    text-align: left
+}
+
+#wrapper.headFixed>header .topLogo {
+    display: none
+}
+
+#wrapper.headFixed>header nav {
+    margin: 0;
+    padding-top: 13px;
+    text-align: left;
+    position: relative;
+    top: -4px
+}
+
+#wrapper.headFixed>header nav .navList>h2 a {
+    color: #fff;
+    font-weight: 600
+}
+
+#wrapper.headFixed>header nav .quickSearchWrap {
+    border-color: rgba(255,255,255,.2)
+}
+
+#wrapper.headFixed>header nav .quickSearchWrap .laySearch {
+    top: 72px
+}
+
+#wrapper.headFixed>header nav .quickSearchWrap .laySearch .quickSearchList {
+    padding-top: 95px
+}
+
+#wrapper.headFixed>header nav .quickSearchWrap .btSearch:after {
+    background-position: -44px -26px
+}
+
+#wrapper.headFixed>header .topUtil {
+    margin-top: 18px;
+    position: static;
+    float: right
+}
+
+#wrapper.headFixed>header .topUtil>a {
+    padding-left: 22px;
+    color: rgba(255,255,255,.6);
+    font-size: 1.4rem;
+    font-weight: 400
+}
+
+#wrapper.headFixed>header .topUtil>a.login:before {
+    background-position: -189px -26px
+}
+
+#wrapper.headFixed>header .topUtil>a.mypage:before {
+    background-position: -208px -26px
+}
+
+#wrapper.headFixed>header .topUtil>a.order:before {
+    background-position: -227px -26px
+}
+
+#wrapper.headFixed>header .topUtil>a.logout:before {
+    background-position: -247px -26px
+}
+
+#wrapper.headFixed>header .topUtil>a:hover {
+    color: #fff
+}
+
+#wrapper.headFixed>header .topUtil .navEtc {
+    position: absolute;
+    top: 21px;
+    left: 865px
+}
+
+#wrapper.headFixed>header .topUtil .navEtc>li a {
+    color: rgba(255,255,255,.6);
+    font-size: 1.8rem
+}
+
+#wrapper.headFixed>header .topUtil .navEtc>li a:hover {
+    color: #fff
+}
+
+#wrapper.headFixed .container {
+    padding-top: 104px
+}
+
+#wrapper.headFixed>header .topUtil {
+    margin-top: 18px;
+    position: static;
+    float: right
+}
+
+#wrapper.headFixed>header .topUtil>a {
+    padding-left: 22px;
+    color: rgba(255,255,255,.6);
+    font-size: 1.4rem;
+    font-weight: 400
+}
+
+#wrapper.headFixed>header .topUtil>a.login:before {
+    background-position: -189px -26px
+}
+
+#wrapper.headFixed>header .topUtil>a.mypage:before {
+    background-position: -208px -26px
+}
+
+#wrapper.headFixed>header .topUtil>a.order:before {
+    background-position: -227px -26px
+}
+
+#wrapper.headFixed>header .topUtil>a.logout:before {
+    background-position: -247px -26px
+}
+
+#wrapper.headFixed>header .topUtil>a:hover {
+    color: #fff
+}
+
+#wrapper.headFixed>header .topUtil .navEtc {
+    position: absolute;
+    top: 21px;
+    left: 865px
+}
+
+#wrapper.headFixed>header .topUtil .navEtc>li a {
+    color: rgba(255,255,255,.6);
+    font-size: 1.8rem
+}
+
+#wrapper.headFixed>header .topUtil .navEtc>li a:hover {
+    color: #fff
+}
+
+#wrapper.headFixed .container {
+    padding-top: 104px
+}
+footer {
+    position: relative;
+    height: 550px;
+    border-top: 1px solid #eaeaea;
+    text-align: center;
+    z-index: 1;
+    background: #18225c
+}
+
+footer:before {
+    content: " ";
+    display: block;
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    height: 304px;
+    z-index: 1
+}
+
+footer .footInner {
+    position: relative;
+    width: 1280px;
+    margin: 0 auto;
+    padding: 0 72px;
+    text-align: left;
+    z-index: 2;
+    font-size: 0
+}
+
+footer .footTop {
+    background: #fff;
+    font-size: 0
+}
+
+footer .footTop .footMenu {
+    display: inline-block;
+    padding: 45px 0 60px;
+    font-size: 0;
+    vertical-align: top
+}
+
+footer .footTop .footMenu>li {
+    display: inline-block;
+    width: 125px;
+    vertical-align: top
+}
+
+footer .footTop .footMenu>li .tit {
+    display: block;
+    margin-bottom: 14px;
+    color: #202020;
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 21px
+}
+
+footer .footTop .footMenu>li>a {
+    display: block;
+    line-height: 35px
+}
+
+footer .footTop .footAppDown {
+    display: inline-block;
+    width: 383px;
+    height: 247px;
+    padding: 43px 39px 0 39px;
+    border: solid #eaeaea;
+    border-width: 0 1px;
+    background: url(/resource/PC/images/common/bg_appDown.png?v2) no-repeat 265px 48px;
+    background-size: 80px
+}
+
+footer .footTop .footAppDown h5 {
+    display: block;
+    margin-bottom: 12px;
+    color: #202020;
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 21px
+}
+
+footer .footTop .footAppDown .txt {
+    color: gray;
+    font-size: 1.4rem
+}
+
+footer .footTop .footAppDown .appLink {
+    font-size: 0;
+    margin: 32px -4px 0
+}
+
+footer .footTop .footAppDown .appLink>li {
+    display: inline-block;
+    width: 50%;
+    padding: 0 4px
+}
+
+footer .footTop .footAppDown .appLink>li button {
+    position: relative;
+    display: block;
+    width: 100%;
+    color: #202020;
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: 38px;
+    text-align: center;
+    border: 1px solid #dadada;
+    border-radius: 8px
+}
+
+footer .footTop .footAppDown .appLink>li button:before {
+    content: "";
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin: 0 2px 2px 0;
+    vertical-align: middle;
+    background: url(/resource/PC/images/common/spr_layout.png) no-repeat 0 -132px
+}
+
+footer .footTop .footAppDown .appLink>li button.ios:before {
+    background-position: -26px -132px
+}
+
+footer .footTop .footCenter {
+    display: inline-block;
+    width: 375px;
+    height: 247px;
+    padding: 43px 39px 0 39px;
+    vertical-align: top
+}
+
+footer .footTop .footCenter h5 {
+    display: block;
+    margin-bottom: 16px;
+    color: #202020;
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 21px
+}
+
+footer .footTop .footCenter .txt {
+    color: gray;
+    font-size: 1.4rem
+}
+
+footer .footTop .footCenter .callInfo {
+    position: absolute;
+    top: 38px;
+    right: 72px
+}
+
+footer .footTop .footCenter .callInfo .callNum {
+    color: #202020;
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 29px
+}
+
+footer .footTop .footCenter .callInfo .callTime {
+    margin-top: 14px
+}
+
+footer .footTop .footCenter .callInfo .callTime>li {
+    font-size: 1.4rem
+}
+
+footer .footTop .footCenter .callInfo .callTime>li .tit {
+    display: inline-block;
+    width: 70px;
+    font-size: 1.4rem
+}
+
+footer .footTop .footCenter .snsList {
+    font-size: 0;
+    margin: 24px 0 0 -8px
+}
+
+footer .footTop .footCenter .snsList>a {
+    position: relative;
+    display: inline-block;
+    width: 48px;
+    height: 48px
+}
+
+footer .footTop .footCenter .snsList>a:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 32px;
+    height: 32px;
+    margin-top: -16px;
+    margin-left: -16px;
+    background: url(/resource/PC/images/common/spr_layout.png) no-repeat -52px -132px
+}
+
+footer .footTop .footCenter .snsList>a.insta:after {
+    background-position: -86px -132px
+}
+
+footer .footTop .footCenter .snsList>a.youTube:after {
+    background-position: -120px -132px
+}
+
+footer .footTop .footCenter .snsList>a.blog:after {
+    background-position: -154px -132px
+}
+
+footer .footBtm {
+    height: 304px;
+    background: #18225c url(/resource/PC/images/common/bg_footPattern.png) repeat-x
+}
+
+footer .footBtm .footInner {
+    padding: 60px 72px 0 72px
+}
+
+footer .footBtm .footMenu {
+    margin-left: -9px
+}
+
+footer .footBtm .footMenu>li {
+    display: inline-block
+}
+
+footer .footBtm .footMenu>li>a {
+    position: relative;
+    padding: 0 8px 0 9px;
+    color: rgba(255,255,255,.6);
+    font-size: 1.6rem;
+    line-height: 29px;
+    font-weight: 400
+}
+
+footer .footBtm .footMenu>li>a:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 1px;
+    height: 14px;
+    margin-top: -8px;
+    background: rgba(255,255,255,.5)
+}
+
+footer .footBtm .footMenu>li:first-child a {
+    color: #fff;
+    font-weight: 600
+}
+
+footer .footBtm .footMenu>li:first-child a:before {
+    display: none
+}
+
+footer .footBtm .txtFoot {
+    margin-top: 19px;
+    color: rgba(255,255,255,.6);
+    font-size: 1.3rem;
+    color: #fff;
+    font-size: 1.6rem
+}
+
+footer .footBtm .txtFoot span {
+    display: inline-block;
+    position: relative;
+    padding: 0 8px 0 9px;
+    color: rgba(255,255,255,.6);
+    font-size: 1.3rem;
+    line-height: 1.3em
+}
+
+footer .footBtm .txtFoot span:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 1px;
+    height: 10px;
+    margin-top: -5px;
+    background: rgba(255,255,255,.2)
+}
+
+footer .footBtm .txtFoot span:first-child {
+    padding-left: 0
+}
+
+footer .footBtm .txtFoot span:first-child:before {
+    display: none
+}
+
+footer .footBtm .txtFoot span .btns {
+    border: 1px solid rgba(255,255,255,.5);
+    padding: 5px;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    margin-left: 4px
+}
+
+footer .footBtm .txtFoot02,footer .footBtm .txtFoot03 {
+    margin-top: 20px;
+    color: rgba(255,255,255,.6);
+    font-size: 1.3rem;
+    line-height: 1.5em
+}
+
+footer .footBtm .txtCopy {
+    margin-top: 22px;
+    color: rgba(255,255,255,.6);
+    font-size: 1.3rem;
+    color: #fff;
+    font-size: 1.6rem
+}
+
+footer .footBtm .txtCopy span {
+    display: inline-block;
+    position: relative;
+    padding: 0 8px 0 9px;
+    color: rgba(255,255,255,.6);
+    font-size: 1.3rem;
+    line-height: 1.3em
+}
+
+footer .footBtm .txtCopy span:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 1px;
+    height: 10px;
+    margin-top: -5px;
+    background: rgba(255,255,255,.2)
+}
+
+footer .footBtm .txtCopy span:first-child {
+    padding-left: 0
+}
+
+footer .footBtm .txtCopy span:first-child:before {
+    display: none
+}
+
+footer .footBtm .footEtc {
+    position: absolute;
+    top: 64px;
+    right: 72px;
+    font-size: 0
+}
+
+footer .footBtm .footEtc span {
+    display: inline-block;
+    width: 72px;
+    height: 72px;
+    margin-left: 16px;
+    background: url(/resource/PC/images/common/spr_layout.png) no-repeat 0 -165px
+}
+
+footer .footBtm .footEtc span+span {
+    background-position: -74px -165px
+}
+
+
+a{
+    text-decoration: none;
+    color:#000;
+   }
+   
+   h2{
+    background: ;
+}
+a:hover{
+    
+
+}
+
+.ec-base-product .prdList {
+    width: 100%;
+    min-width: 756px;
+    margin: -20px 0 0;
+    font-size: 0;
+    line-height: 0;
+}
+
+.ec-base-product .prdList > li {
+    position: relative;
+    display: inline-block;
+    margin: 30px 0 20px;
+    color: #757575;
+    vertical-align: top;
+}
+
+.ec-base-product .prdList .chk {
+    position: absolute;
+    top: -10px;
+    left: 0;
+    right: 0;
+    display: block;
+    margin: 0 0 10px;
+}
+
+.ec-base-product .prdList .thumbnail {
+    position: relative;
+    text-align: center;
+}
+
+.ec-base-product .prdList .thumbnail .prdImg {
+    position: relative;
+}
+
+.ec-base-product .prdList .thumbnail a img {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.ec-base-product .prdList .thumbnail .wish {
+    position: absolute;
+    right: 3px;
+    bottom: 4px;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.ec-base-product .prdList .thumbnail .prdIcon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+}
+
+.ec-base-product .prdList .thumbnail .icon:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.ec-base-product .prdList .thumbnail .promotion {
+    float: left;
+    margin: 0 0 4px;
+    text-align: left;
+}
+
+.ec-base-product .prdList .thumbnail .promotion img {
+    margin: 0 4px 0 0;
+}
+
+.ec-base-product .prdList .thumbnail .button {
+    float: right;
+    margin: 0 0 4px;
+}
+
+.ec-base-product .prdList .thumbnail .button img {
+    margin: 0 2px 0 0;
+    cursor: pointer;
+}
+
+.ec-base-product .prdList .thumbnail .button .option {
+    display: inline;
+    position: relative;
+}
+
+.ec-base-product .prdList .thumbnail .button .likeButton {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.ec-base-product .prdList .thumbnail .button .likeButton button {
+    font-family: verdana;
+    color: #9a9a9a;
+    letter-spacing: -1px;
+    background: none;
+}
+
+.ec-base-product .prdList .thumbnail .button .likeButton button img {
+    margin: 0;
+    vertical-align: middle;
+}
+
+.ec-base-product .prdList .thumbnail .button .likeButton button strong {
+    height: 16px;
+    vertical-align: middle;
+}
+
+.ec-base-product .prdList .thumbnail .button .likeButton.selected button {
+    color: #353535;
+}
+
+.ec-base-product .prdList .icon {
+    margin: 5px 0 0;
+    vertical-align: middle;
+}
+
+.ec-base-product .prdList .icon img {
+    margin: 0 3px;
+}
+
+.ec-base-product .prdList .description {
+    font-family: 'Noto Serif KR';
+    margin: 0 auto;
+    padding: 0 7px;
+    font-size: 10px;
+    line-height: 18px;
+    text-align: center;
+}
+
+.ec-base-product .prdList .description .name {
+    display: block;
+    text-align: center;
+    font-weight: normal;
+}
+
+.ec-base-product .prdList .description .name a {
+    color: #2e2e2e;
+}
+
+.ec-base-product .prdList .description .mileage {
+    display: block;
+}
+
+.ec-base-product .prdList .description span.grid {
+    display: block;
+}
+
+.ec-base-product .prdList .description .title {
+    font-weight: normal;
+    vertical-align: top;
+    font-size: 17px;
+    color: #15353c;
+    margin-top: 20px;
+}
+
+.ec-base-product .prdList .description .name span {
+    font-weight: 900!important;
+    font-size: 15px!important;
+    font-weight: normal;
+    text-align: center;
+    color: #15353c!important;
+    line-height: 28px;
+}

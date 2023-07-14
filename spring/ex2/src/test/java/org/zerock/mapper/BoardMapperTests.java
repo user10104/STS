@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.zerock.domain.BoardVO;
+import org.zerock.domain.Criterial;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -116,6 +117,15 @@ public class BoardMapperTests {
 	public void Delete() {
 		int result = boardMapper.delete(17L);
 		log.info("result: {}", result);
+	}
+	
+	@Test
+	public void testPaging() {
+		Criterial cri = new Criterial(3,10); //pagenum, amount
+		List<BoardVO> list = boardMapper.getListWithPaging(cri);
+		list.forEach(vo->log.info("vo : {}", vo)
+				);
+	
 	}
 	
 }

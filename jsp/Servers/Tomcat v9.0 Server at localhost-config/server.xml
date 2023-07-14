@@ -112,9 +112,7 @@
 
 
 				
-			<Context docBase="ezen_team_project" path="/Jeju" reloadable="true" source="org.eclipse.jst.jee.server:ezen_team_project"><Context docBase="MyBatisTest" path="/MyBatisTest" reloadable="true" source="org.eclipse.jst.jee.server:MyBatisTest"/>
-			<Resource auth="Container" driverClassName="oracle.jdbc.OracleDriver" maxIdle="10" maxTotal="20" maxWaitMillis="-1" name="jdbc/myoracle" password="tiger" type="javax.sql.DataSource" url="jdbc:oracle:thin:@127.0.0.1:1521:XE" username="scott"/>
-              </Context></Host>
+			<Context docBase="ezen_team_project" path="/ezen_team_project" reloadable="true" source="org.eclipse.jst.jee.server:ezen_team_project"/></Host>
 		</Engine>
 	</Service>
 </Server>

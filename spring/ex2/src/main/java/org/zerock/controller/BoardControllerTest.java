@@ -38,7 +38,9 @@ public class BoardControllerTest {
 	public void testList() throws Exception {
 		
 		log.info("{}",
-				mockMvc.perform(MockMvcRequestBuilders.get("/board/list")) //.get or .post
+				mockMvc.perform(MockMvcRequestBuilders.get("/board/list") //.get or .post
+				.param("pageNum","150")
+				.param("amount", "15"))
 				.andReturn()
 				.getModelAndView()
 				.getModelMap() //데이터 전달된거 확인 가능

@@ -30,18 +30,23 @@
                         	
                         <div class="form-group">
                           	<label>Title</label>
-                          	<input class="form-control" name="title" value="${board.title}" >
+                          	<input class="form-control" name="title" value="${board.title}" readonly="readonly">
                         </div>
                         
                         <div class="form-group">
                           	<label>Content</label>
-                          	<input class="form-control" name="content" value="${board.content}" >
+                          	<input class="form-control" name="content" value="${board.content}" readonly="readonly">
                         </div>
                         
-                        <button data-oper="modify" class="btn btn-default"
-                        onclick="location.href='/board/modify?bno=${board.bno }'"
-                        >Modify</button> &nbsp;&nbsp;&nbsp;
+                        <button data-oper="modify" class="btn btn-default">Modify</button> &nbsp;&nbsp;&nbsp;
                         <button data-oper="list" class="btn btn-info">List</button> &nbsp;&nbsp;&nbsp;
+                        
+                        
+                        <form action="/board/modify" method="get" id="operForm">
+                        	<input type="hidden" id="bno" name= bno value="${board.bno }">
+							<input type="hidden" id="pageNum"name=pageNum  value="${cri.pageNum }">                       
+							<input type="hidden" id="amount"name=amount  value="${cri.amount}">                       
+                        </form>
                         
                         </div>
                         <!-- /.panel-body -->
@@ -52,6 +57,23 @@
             </div>
             <!-- /.row -->
    
+  
+
 
 <%@ include file="../includes/footer.jsp"%>
 
+<script>
+	$(document).ready(function(){
+		var operForm = $("#operForm");
+		
+		$("button[data-oper='modify']").on("click", function(){
+			operForm.attr("action", "/board/modify").submit();
+		});
+		
+		$("button[data-oper='list']").on("click", function(){
+			operForm.find("#bno").remove();
+			operForm.attr("action", "/board/list").submit();
+		});
+		
+	});
+</script>

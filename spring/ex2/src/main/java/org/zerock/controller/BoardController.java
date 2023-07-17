@@ -64,6 +64,8 @@ public class BoardController {
 
 		rttr.addAttribute("pageNum", cri.getPageNum());
 		rttr.addAttribute("amount", cri.getAmount());
+		rttr.addAttribute("type", cri.getType());
+		rttr.addAttribute("keyword", cri.getKeyword());
 		return "redirect:/board/list";
 	}
 	
@@ -74,8 +76,10 @@ public class BoardController {
 		if(service.modify(vo)) {
 			rttr.addFlashAttribute("result", "success");			
 		}
-			rttr.addAttribute("pageNum", cri.getPageNum());
-			rttr.addAttribute("amount", cri.getAmount());
+		rttr.addAttribute("pageNum", cri.getPageNum());
+		rttr.addAttribute("amount", cri.getAmount());
+		rttr.addAttribute("type", cri.getType());
+		rttr.addAttribute("keyword", cri.getKeyword());
 		return "redirect:/board/list";
 	}
 }

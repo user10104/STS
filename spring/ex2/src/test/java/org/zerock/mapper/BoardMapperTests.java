@@ -1,6 +1,8 @@
 package org.zerock.mapper;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -126,6 +128,42 @@ public class BoardMapperTests {
 		list.forEach(vo->log.info("vo : {}", vo)
 				);
 	
+	}
+	
+	@Test
+	public void testSearchTest() {
+		Map<String, String> map = new HashMap<String, String>();
+		map.put("T", "테스트제목1");
+		map.put("C", "테스트내용1");
+		map.put("W", "user01");
+		
+		Map<String, Map<String,String>>outer = new HashMap();
+		outer.put("map", map);
+		List<BoardVO> list = boardMapper.searchTest(outer); //실행 보드매퍼 이름 같게
+		log.info("list:{}",list );
+		
+	}
+	@Test
+	public void testSerchPaging() {
+		Criterial cri = new Criterial();
+		cri.setType("TCW");  //"TCW" <으로 쓸경우 제목, 컨텐츠, 글쓴이 모두 포함, T 만쓰면 제목에서만
+		cri.setKeyword("w");
+		List<BoardVO> list = boardMapper.getListWithPaging(cri);
+		
+		log.info("list : {}", list);
+		
+	}
+	
+	@Test
+	public void testGetTotalCount() {
+		Criterial cri = new Criterial();
+		cri.setType("TCW");  //"TCW" <으로 쓸경우 제목, 컨텐츠, 글쓴이 모두 포함, T 만쓰면 제목에서만
+		cri.setKeyword("w");
+		
+		int count = boardMapper.getTotalCount(cri);
+		
+		log.info("count : {}", count);
+		
 	}
 	
 }

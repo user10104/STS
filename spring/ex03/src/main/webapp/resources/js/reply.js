@@ -23,7 +23,7 @@ var replyService = (function(){
         }
     })
 
-    }//add
+    }//add end
 
     function getList(param, callback, error){
         let bno = param.bno;

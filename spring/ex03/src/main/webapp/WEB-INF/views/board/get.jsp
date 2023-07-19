@@ -54,29 +54,60 @@
  <%@include file="../includes/footer.jsp" %>
 
  
- <script>
- 	$(document).ready(function(e){
- 		
- 		var operForm = $("#operForm");
- 		
- 		$("button[data-oper='modify']").on("click",function(){
- 			operForm.attr("action", "/board/modify").submit();
- 		});
+ <script type="text/javascript" src="/resources/js/reply.js"></script>
 
- 		$("button[data-oper='list']").on("click",function(){
- 			operForm.find("#bno").remove();
- 			operForm.attr("action", "/board/list").submit();
- 		});
- 		
- 	});
- </script>
+<script>
+  var bnoValue = '${board.bno}';
  
+  
+  
+  /* replyService.add(   //js의 function add 실행
+          {reply:"Js Test", replyer : "tester", bno:bnoValue},
+
+          function(result){
+            alert("result : " + result);
+          }
+  );
+  */
  
- 
- 
- 
- 
- 
- 
- 
- 
+  /* replyService.getList({bno:bnoValue}, function(list){
+	  for(let i=0, len= list.length||0; i<len; i++){
+		  console.log(list[i]);
+	  }
+  });
+   */
+  
+  /*  replyService.remove(69, function(data){
+	  if(data === "success")
+		  alert("Removed");
+	  else
+		  alert("error");
+	   
+   }); */
+   
+  /*  replyService.update({rno : 56, reply:"reply업데이트"},
+		   function(data){
+	  			if(data==="success")alert("update 성공");
+   }); */
+   
+   replyService.get(57, function(data){
+	 console.log(data);
+	 alert(data.rno);
+   })
+   
+   
+</script>
+
+<script>
+  $(document).ready(function (e){
+    var operForm = $("#operForm");
+
+    $("button[data-oper='modify']").on("click",function (){
+      operForm.attr("action","/board/modify").submit();
+    });
+    $("button[data-oper='list']").on("click",function (){
+      operForm.find("#bno").remove();
+      operForm.attr("action","/board/list").submit();
+    });
+  });
+</script>

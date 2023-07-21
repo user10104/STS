@@ -6,25 +6,23 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
-/*CREATE TABLE TBL_REPLY(
-	    RNO NUMBER(10,0),
-	    BNO NUMBER(10,0) NOT NULL,
-	    REPLY VARCHAR2(1000) NOT NULL,
-	    REPLYER VARCHAR2(50) NOT NULL,
-	    REPLYDATE DATE DEFAULT SYSDATE,
-	    UPDATEDATE DATE DEFAULT SYSDATE
-	);	*/
+/*
+ *create table tbl_reply(
+    rno number(10,0),
+    bno number(10,0) not null,
+    reply varchar2(1000) not null,
+    replyer varchar2(50) not null,
+    replyDate date default sysdate,
+    updateDate date default sysdate
+); 
+ */
 
-@Setter
-@Getter
-@ToString
+@Setter@Getter@ToString
 public class ReplyVO {
-
-	private	Long rno;
-	private	Long bno;
-	private	String reply;
-	private	String replyer;
-	private	Date replydate;
-	private Date updatedate;
-	
+	private Long rno;
+	private Long bno;
+	private String reply;
+	private String replyer;
+	private Date replyDate;
+	private Date updateDate;
 }

@@ -87,7 +87,7 @@
 			    </div>
 			    <!-- 페이징 처리 끝 -->
                 
-                <!--  Modal Start -->
+              <!--  Modal Start -->
 			  <div class="modal" id="myModal">
 			    <div class="modal-dialog">
 			      <div class="modal-content">

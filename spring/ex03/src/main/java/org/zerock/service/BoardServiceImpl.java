@@ -3,7 +3,6 @@ package org.zerock.service;
 import java.util.List;
 
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.zerock.domain.BoardVO;
 import org.zerock.domain.Criterial;
 import org.zerock.mapper.BoardMapper;

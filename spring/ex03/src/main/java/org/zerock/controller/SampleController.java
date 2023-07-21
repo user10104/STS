@@ -5,8 +5,12 @@ import java.util.Map;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 
 @Controller()
@@ -53,5 +57,27 @@ public class SampleController {
 		model.addAttribute("map2", map2);
 		
 	}
+	
+	@GetMapping("/test")
+	public @ResponseBody String testGetMapping() {
+		return "testGetMapping";
+	}
+	
+	@PostMapping("/test")
+	public @ResponseBody String testPostMapping() {
+		return "testPostMapping";
+	}
+	
+	
+	@PutMapping("/test")
+	public @ResponseBody String testPutMapping() {
+		return "testPutMapping";
+	}
+	
+	@DeleteMapping("/test")
+	public @ResponseBody String DeleteMapping() {
+		return "DeleteMapping";
+	}
+	
 
 }
